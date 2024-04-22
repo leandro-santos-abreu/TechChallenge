@@ -1,0 +1,11 @@
+F:\PosTech\Agenda\Agenda.Domain\bin\Debug\net8.0\Agenda.Domain.deps.json
+F:\PosTech\Agenda\Agenda.Domain\bin\Debug\net8.0\Agenda.Domain.dll
+F:\PosTech\Agenda\Agenda.Domain\bin\Debug\net8.0\Agenda.Domain.pdb
+F:\PosTech\Agenda\Agenda.Domain\obj\Debug\net8.0\Agenda.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\PosTech\Agenda\Agenda.Domain\obj\Debug\net8.0\Agenda.Domain.AssemblyInfoInputs.cache
+F:\PosTech\Agenda\Agenda.Domain\obj\Debug\net8.0\Agenda.Domain.AssemblyInfo.cs
+F:\PosTech\Agenda\Agenda.Domain\obj\Debug\net8.0\Agenda.Domain.csproj.CoreCompileInputs.cache
+F:\PosTech\Agenda\Agenda.Domain\obj\Debug\net8.0\Agenda.Domain.dll
+F:\PosTech\Agenda\Agenda.Domain\obj\Debug\net8.0\refint\Agenda.Domain.dll
+F:\PosTech\Agenda\Agenda.Domain\obj\Debug\net8.0\Agenda.Domain.pdb
+F:\PosTech\Agenda\Agenda.Domain\obj\Debug\net8.0\ref\Agenda.Domain.dll
