@@ -1,4 +1,3 @@
-F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\appsettings.Development.json
 F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\appsettings.json
 F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Agenda.Api.exe
 F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Agenda.Api.deps.json
@@ -42,3 +41,4 @@ F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Agenda.Domain.dll
 F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Agenda.Infrastructure.dll
 F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Agenda.Domain.pdb
 F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Agenda.Infrastructure.pdb
+F:\PosTech\Agenda\Agenda.Api\obj\Debug\net8.0\Agenda.Api.sourcelink.json

@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  agenda.api:
+    image: ${DOCKER_REGISTRY-}agendaapi
+    container_name: agenda.api
+    build:
+      context: .
+      dockerfile: Agenda.Api/Dockerfile
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+  agenda.database:
+    image: postgres:latest
+    container_name: agenda.database
+    environment:
+        - POSTGRES_DB=agenda
+        - POSTGRES_USER=agendauser
+        - POSTGRES_PASSWORD=Scz7jbXb_:so1eXH 
+    volumes:
+        - /.containter/agenda-db:/var/lib/postgresql/data
+    ports:
+        - "5432:5432"

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "LGVXdZSDuS/z78Sbj7C9vCgsesXcIt0Pl9YyU7G/KYO6V/aBgcmXLJfFsEX1/+uCoS7kKqyHTQbkhB4zhAj3nA==",
+  "dgSpecHash": "rc+lR8Zzbadqdb4l01TOjOad7YyzxEphtqSOhgbJOW/e7xzqw3Kubtxq4Bd8u9J5uhJV+qP71vVWQS3/IKuXWw==",
   "success": true,
   "projectFilePath": "F:\\PosTech\\Agenda\\Agenda.Infrastructure\\Agenda.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Outsider\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Outsider\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Outsider\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Outsider\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Outsider\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\Outsider\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",

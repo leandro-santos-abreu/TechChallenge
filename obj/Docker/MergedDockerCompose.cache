@@ -1,0 +1,59 @@
+name: dockercompose1566660627215746367
+services:
+  agenda.api:
+    build:
+      context: F:\PosTech\Agenda
+      dockerfile: Agenda.Api/Dockerfile
+    container_name: agenda.api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "5000"
+      ASPNETCORE_HTTPS_PORTS: "5001"
+    image: agendaapi
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5000
+        published: "5000"
+        protocol: tcp
+      - mode: ingress
+        target: 5001
+        published: "5001"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\Outsider\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Outsider\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+  agenda.database:
+    container_name: agenda.database
+    environment:
+      POSTGRES_DB: agenda
+      POSTGRES_PASSWORD: Scz7jbXb_:so1eXH
+      POSTGRES_USER: agendauser
+    image: postgres:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5432"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /.containter/agenda-db
+        target: /var/lib/postgresql/data
+        bind:
+          create_host_path: true
+networks:
+  default:
+    name: dockercompose1566660627215746367_default

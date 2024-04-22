@@ -1,5 +1,7 @@
-﻿using Agenda.Infrastructure.Data;
+﻿using Agenda.Domain.Entities;
+using Agenda.Domain.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Agenda.API.Controllers
 {
@@ -7,42 +9,46 @@ namespace Agenda.API.Controllers
     [ApiController]
     public class ContactsController : ControllerBase
     {
-        private readonly DataContext context;
+        private readonly IContactRepository contactRepository;
 
-        public ContactsController(DataContext context)
+        public ContactsController(IContactRepository ContactRepository)
         {
-            this.context = context;
+            this.contactRepository = ContactRepository;
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get(CancellationToken ct)
         {
-            var contacts = context.Contacts.ToList();
+            var contacts = await contactRepository.GetAllContacts(ct);
             return Ok(contacts);
         }
 
         [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        public async Task<IActionResult> GetById(Guid id, CancellationToken ct)
         {
-            return Ok();
+            var contact = await contactRepository.GetContactById(id, ct);
+            return Ok(contact);
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] string value)
+        public async Task<IActionResult> Post([FromBody] Contact entity, CancellationToken ct)
         {
-            return Created();
+            var savedEntity = await contactRepository.SaveContact(entity, ct);
+            return Ok(savedEntity);
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] string value)
+        public async Task<IActionResult> Put(Guid id, [FromBody] Contact entity, CancellationToken ct)
         {
-            return Ok();
+            var updatedEntity = await contactRepository.UpdateContactById(id, entity, ct);
+            return Ok(updatedEntity);
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(Guid id, CancellationToken ct)
         {
-            return NoContent();
+            var deletedEntity = await contactRepository.DeleteContactById(id, ct);
+            return Ok(deletedEntity);
         }
     }
 }
