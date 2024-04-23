@@ -1,4 +1,4 @@
-﻿using Agenda.Infrastructure.Interfaces;
+﻿using Agenda.Domain.Interfaces;
 using Microsoft.Extensions.Configuration;
 
 namespace Agenda.Infrastructure.Data;

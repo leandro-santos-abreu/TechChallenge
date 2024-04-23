@@ -1,7 +1,5 @@
-﻿using Agenda.Domain.Services;
+﻿using Agenda.Domain.Interfaces;
 using Agenda.Infrastructure.Data;
-using Agenda.Infrastructure.Interfaces;
-using Agenda.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace Agenda.Api.Extensions
@@ -11,8 +9,6 @@ namespace Agenda.Api.Extensions
         public static void ApplyDependencyInjection(WebApplicationBuilder builder)
         {
             builder.Services.AddSingleton<IDatabaseConfig, DatabaseConfig>();
-            builder.Services.AddScoped<IContactRepository, ContactRepository>();
-
 
             builder.Services.AddDbContext<DataContext>(options =>
             {
