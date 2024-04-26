@@ -20,3 +20,15 @@ F:\PosTech\Agenda\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 F:\PosTech\Agenda\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 F:\PosTech\Agenda\obj\Debug\docker-compose.dcproj.CopyComplete
 F:\PosTech\Agenda\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+F:\PosTech\Agenda\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+F:\PosTech\Agenda\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+F:\PosTech\Agenda\bin\Debug\Microsoft.IdentityModel.Logging.dll
+F:\PosTech\Agenda\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+F:\PosTech\Agenda\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\PosTech\Agenda\bin\Debug\System.Web.Helpers.Crypto.dll
+F:\PosTech\Agenda\bin\Debug\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\PosTech\Agenda\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\PosTech\Agenda\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+F:\PosTech\Agenda\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime.dll
+F:\PosTech\Agenda\bin\Debug\NodaTime.dll
+F:\PosTech\Agenda\bin\Debug\Npgsql.NodaTime.dll

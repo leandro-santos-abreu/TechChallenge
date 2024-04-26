@@ -6,28 +6,31 @@ namespace Agenda.Infrastructure.Data
 {
     public class DataContext : DbContext
     {
-        public DataContext()
-        {
-        }
+        private readonly string? _connectionString;
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
         }
 
+        public DataContext()
+        {
+            IConfiguration configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            _connectionString = configuration.GetConnectionString("ConnectionString")!;
+        }
+
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
+         if (!optionsBuilder.IsConfigured)
             {
-                DatabaseConfig databaseConfig = new DatabaseConfig();
-                optionsBuilder.UseNpgsql(databaseConfig.ConnectionString);
+                optionsBuilder.UseNpgsql(_connectionString);
             }
-        }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Contact>();
         }
     }
 }

@@ -1,4 +1,5 @@
 using Agenda.Api.Extensions;
+using Agenda.Api.Middlewares;
 using Agenda.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,11 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 DependencyInjection.ApplyDependencyInjection(builder);
 
 var app = builder.Build();
+
+app.UseAuthenticationMiddleware();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -25,7 +27,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

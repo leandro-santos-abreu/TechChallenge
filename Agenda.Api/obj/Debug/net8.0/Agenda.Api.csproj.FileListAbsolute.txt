@@ -42,3 +42,13 @@ F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Agenda.Infrastructure.dll
 F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Agenda.Domain.pdb
 F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Agenda.Infrastructure.pdb
 F:\PosTech\Agenda\Agenda.Api\obj\Debug\net8.0\Agenda.Api.sourcelink.json
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\System.Web.Helpers.Crypto.dll
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Riok.Mapperly.Abstractions.dll

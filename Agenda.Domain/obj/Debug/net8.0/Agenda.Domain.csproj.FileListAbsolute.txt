@@ -10,3 +10,4 @@ F:\PosTech\Agenda\Agenda.Domain\obj\Debug\net8.0\refint\Agenda.Domain.dll
 F:\PosTech\Agenda\Agenda.Domain\obj\Debug\net8.0\Agenda.Domain.pdb
 F:\PosTech\Agenda\Agenda.Domain\obj\Debug\net8.0\ref\Agenda.Domain.dll
 F:\PosTech\Agenda\Agenda.Domain\obj\Debug\net8.0\Agenda.Domain.sourcelink.json
+F:\PosTech\Agenda\Agenda.Domain\obj\Debug\net8.0\Agenda.Domain.csproj.AssemblyReference.cache
