@@ -13,7 +13,6 @@ F:\PosTech\Agenda\Agenda.Api\obj\Debug\net8.0\Agenda.Api.GeneratedMSBuildEditorC
 F:\PosTech\Agenda\Agenda.Api\obj\Debug\net8.0\Agenda.Api.AssemblyInfoInputs.cache
 F:\PosTech\Agenda\Agenda.Api\obj\Debug\net8.0\Agenda.Api.AssemblyInfo.cs
 F:\PosTech\Agenda\Agenda.Api\obj\Debug\net8.0\Agenda.Api.csproj.CoreCompileInputs.cache
-F:\PosTech\Agenda\Agenda.Api\obj\Debug\net8.0\Agenda.Api.MvcApplicationPartsAssemblyInfo.cs
 F:\PosTech\Agenda\Agenda.Api\obj\Debug\net8.0\Agenda.Api.MvcApplicationPartsAssemblyInfo.cache
 F:\PosTech\Agenda\Agenda.Api\obj\Debug\net8.0\staticwebassets.build.json
 F:\PosTech\Agenda\Agenda.Api\obj\Debug\net8.0\staticwebassets.development.json
@@ -52,3 +51,6 @@ F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authenticatio
 F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Riok.Mapperly.Abstractions.dll
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Castle.Core.dll
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll
+F:\PosTech\Agenda\Agenda.Api\obj\Debug\net8.0\Agenda.Api.MvcApplicationPartsAssemblyInfo.cs

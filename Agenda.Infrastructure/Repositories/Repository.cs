@@ -25,10 +25,7 @@ namespace Agenda.Infrastructure.Repositories
             var entity = await FindByIdAsync(id, ct);
 
             if (entity != null)
-            {
                 _dbSet.Remove(entity);
-                await _context.SaveChangesAsync(ct);
-            }
 
             return entity;
         }
@@ -42,14 +39,12 @@ namespace Agenda.Infrastructure.Repositories
         public virtual async Task<T> SaveAsync(T entity, CancellationToken ct)
         {
             await _dbSet.AddAsync(entity, ct);
-            await _context.SaveChangesAsync(ct);
             return entity;
         }
 
         public virtual async Task<T> UpdateAsync(T entity)
         {
             _dbSet.Update(entity);
-            await _context.SaveChangesAsync();
             return entity;
         }
     }

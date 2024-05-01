@@ -1,4 +1,5 @@
 ﻿using Agenda.Domain.Entities;
+using Agenda.Infrastructure.Configurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -27,10 +28,20 @@ namespace Agenda.Infrastructure.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-         if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseNpgsql(_connectionString);
-            }
+             if (!optionsBuilder.IsConfigured)
+                {
+                    optionsBuilder.UseNpgsql(_connectionString);
+                    optionsBuilder.UseLazyLoadingProxies();
+                }
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new AreaCodeConfiguration());
+            modelBuilder.ApplyConfiguration(new ContactConfiguration());
+            modelBuilder.ApplyConfiguration(new PhoneNumberConfiguration());
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+        }
+
     }
 }

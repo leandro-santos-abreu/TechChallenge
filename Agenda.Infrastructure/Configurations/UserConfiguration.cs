@@ -15,7 +15,7 @@ namespace Agenda.Infrastructure.Configurations
         {
             builder.ToTable("Users");
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasColumnType("GUID").UseIdentityColumn();
+            builder.Property(x => x.Id).HasColumnType("uuid");
             builder.Property(x => x.UserName).HasColumnType("VARCHAR").HasMaxLength(150).IsRequired();
             builder.Property(x => x.Password).HasColumnType("VARCHAR").HasMaxLength(150).IsRequired();
 
@@ -23,6 +23,14 @@ namespace Agenda.Infrastructure.Configurations
                 .WithOne(c => c.User)
                 .HasForeignKey(c => c.UserId)
                 ;
+
+            builder.HasData(
+                new User()
+                {
+                    Id = Guid.NewGuid(),
+                    UserName = "leandro.abreu",
+                    Password = "AEQhFqAVgpgrcsJHuIVbB+Wrb+TmY8XXijmVvfzvjo1bNuaQgsu+XukrY9Sfixi0oQ==",
+                });
 
         }
     }

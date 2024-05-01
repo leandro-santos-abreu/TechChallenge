@@ -32,3 +32,5 @@ F:\PosTech\Agenda\bin\Debug\Microsoft.IdentityModel.Protocols.dll
 F:\PosTech\Agenda\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime.dll
 F:\PosTech\Agenda\bin\Debug\NodaTime.dll
 F:\PosTech\Agenda\bin\Debug\Npgsql.NodaTime.dll
+F:\PosTech\Agenda\bin\Debug\Microsoft.EntityFrameworkCore.Proxies.dll
+F:\PosTech\Agenda\bin\Debug\Castle.Core.dll

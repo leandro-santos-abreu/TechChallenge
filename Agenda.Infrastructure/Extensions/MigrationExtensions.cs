@@ -13,7 +13,8 @@ namespace Agenda.Infrastructure.Extensions
 
             using DataContext dataContext = scope.ServiceProvider.GetRequiredService<DataContext>()!;
 
-            dataContext.Database.Migrate();
+            if(dataContext.Database.GetPendingMigrations().Any())
+                dataContext.Database.Migrate();
         }
     }
 }

@@ -1,18 +1,13 @@
 ﻿using Agenda.Domain.Entities;
+using Agenda.Domain.Entities;
 using Agenda.Domain.Interfaces;
 using Agenda.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Agenda.Infrastructure.Repositories
 {
-    public class UserRepository : Repository<User>, IUserRepository
+    public class UserRepository(DataContext context) : Repository<User>(context), IUserRepository
     {
-        public UserRepository(DataContext context) : base(context)
-        {
-        }
-
         public override async Task<User> SaveAsync(User entity, CancellationToken ct)
         {
             entity.Password = System.Web.Helpers.Crypto.HashPassword(entity.Password);

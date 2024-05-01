@@ -1,9 +1,6 @@
 ﻿using Agenda.Api.Authentication;
-using Agenda.Domain;
-using Agenda.Domain.Entities;
 using Agenda.Domain.Interfaces;
 using Agenda.Infrastructure.Data;
-using Agenda.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;

@@ -1,11 +1,6 @@
 ﻿using Agenda.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Agenda.Infrastructure.Configurations
 {
@@ -15,10 +10,9 @@ namespace Agenda.Infrastructure.Configurations
         {
             builder.ToTable("Contacts");
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasColumnType("GUID").UseIdentityColumn();
+            builder.Property(x => x.Id).HasColumnType("uuid");
             builder.Property(x => x.Name).HasColumnType("VARCHAR").HasMaxLength(150).IsRequired();
             builder.Property(x => x.Surname).HasColumnType("VARCHAR").HasMaxLength(150).IsRequired();
-            builder.Property(x => x.CellPhone).HasColumnType("VARCHAR").HasMaxLength(14).IsRequired();
             builder.Property(x => x.CPF).HasColumnType("VARCHAR").HasMaxLength(11).IsRequired();
             builder.Property(x => x.Email).HasColumnType("VARCHAR").HasMaxLength(11).IsRequired();
 
@@ -27,6 +21,10 @@ namespace Agenda.Infrastructure.Configurations
                 .HasForeignKey(c => c.UserId)
                 ;
 
+            builder
+                .HasMany(c => c.PhoneNumbers)
+                .WithOne(p => p.Contact)
+                .HasForeignKey(p => p.ContactId);
         }
     }
 }
