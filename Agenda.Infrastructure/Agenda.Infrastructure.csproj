@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Agenda.Domain\Agenda.Domain.csproj" />
+    <ProjectReference Include="..\Agenda.Logging\Agenda.Logging.csproj" />
   </ItemGroup>
 
 </Project>

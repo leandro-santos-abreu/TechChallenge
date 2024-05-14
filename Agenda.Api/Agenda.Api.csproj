@@ -18,9 +18,15 @@
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.5.1" />
   </ItemGroup>
 
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+	</PropertyGroup>
+	
   <ItemGroup>
     <ProjectReference Include="..\Agenda.Domain\Agenda.Domain.csproj" />
     <ProjectReference Include="..\Agenda.Infrastructure\Agenda.Infrastructure.csproj" />
+    <ProjectReference Include="..\Agenda.Logging\Agenda.Logging.csproj" />
   </ItemGroup>
 
   <ItemGroup>

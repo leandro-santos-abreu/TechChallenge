@@ -1,5 +1,6 @@
 ﻿using Agenda.Domain.Entities;
 using Agenda.Domain.Interfaces;
+using Agenda.Domain.Interfaces.Repositories;
 using Agenda.Infrastructure.Repositories;
 
 namespace Agenda.Infrastructure.Data
@@ -10,6 +11,7 @@ namespace Agenda.Infrastructure.Data
         private IUserRepository _userRepository;
         private IContactRepository _contactRepository;
         private IRepository<PhoneNumber> _phoneNumberRepository;
+        private IRepository<LogEntity> _logsRepository;
 
         public UnitOfWork(DataContext context)
         {
@@ -17,12 +19,13 @@ namespace Agenda.Infrastructure.Data
             _userRepository = new UserRepository(_dataContext);
             _contactRepository = new ContactRepository(_dataContext);
             _phoneNumberRepository = new Repository<PhoneNumber>(_dataContext);
+            _logsRepository = new Repository<LogEntity>(_dataContext);
         }
 
         public IUserRepository Users => _userRepository;
-
         public IRepository<Contact> Contacts => _contactRepository;
         public IRepository<PhoneNumber> PhoneNumbers => _phoneNumberRepository;
+        public IRepository<LogEntity> Logs => _logsRepository;
 
         public async Task CompleteAsync(CancellationToken ct)
         {

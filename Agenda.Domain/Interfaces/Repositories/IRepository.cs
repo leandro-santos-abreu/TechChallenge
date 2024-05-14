@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Agenda.Domain.Interfaces
+namespace Agenda.Domain.Interfaces.Repositories
 {
     public interface IRepository<T> where T : BaseEntity
     {

@@ -17,3 +17,5 @@ F:\PosTech\Agenda\Agenda.Infrastructure\obj\Debug\net8.0\EFCoreNpgsqlNodaTime.cs
 F:\PosTech\Agenda\Agenda.Infrastructure\obj\Debug\net8.0\Agenda.Infrastructure.csproj.CopyComplete
 F:\PosTech\Agenda\Agenda.Infrastructure\obj\Debug\net8.0\Agenda.Infrastructure.genruntimeconfig.cache
 F:\PosTech\Agenda\Agenda.Infrastructure\obj\Debug\net8.0\Agenda.Infrastructure.sourcelink.json
+F:\PosTech\Agenda\Agenda.Infrastructure\bin\Debug\net8.0\Agenda.Logging.dll
+F:\PosTech\Agenda\Agenda.Infrastructure\bin\Debug\net8.0\Agenda.Logging.pdb

@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Nf6yv3eJlB+nGSHFP7KARXeuD+oxeBB6ZrwMIpL1F4GrU19twvOCKGTZVWJLptWUkLqu8944zm0oqAeeY5cjDA==",
+  "dgSpecHash": "IeE/Wtsb6r4OqnU/BLBUPXuY4zrTThX4SQUGvUMpwxEVr0PuA0NF78714m/FfUCIoP+jaRLLGEUjaFZ+aDlXNQ==",
   "success": true,
   "projectFilePath": "F:\\PosTech\\Agenda\\Agenda.Domain\\Agenda.Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Outsider\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\Outsider\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\Outsider\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\Outsider\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Outsider\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\Outsider\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
     "C:\\Users\\Outsider\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
     "C:\\Users\\Outsider\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
     "C:\\Users\\Outsider\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",

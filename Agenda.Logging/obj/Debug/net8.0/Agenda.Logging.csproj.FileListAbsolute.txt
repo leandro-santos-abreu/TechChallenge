@@ -1,0 +1,16 @@
+F:\PosTech\Agenda\Agenda.Logging\bin\Debug\net8.0\Agenda.Logging.deps.json
+F:\PosTech\Agenda\Agenda.Logging\bin\Debug\net8.0\Agenda.Logging.dll
+F:\PosTech\Agenda\Agenda.Logging\bin\Debug\net8.0\Agenda.Logging.pdb
+F:\PosTech\Agenda\Agenda.Logging\obj\Debug\net8.0\Agenda.Logging.csproj.AssemblyReference.cache
+F:\PosTech\Agenda\Agenda.Logging\obj\Debug\net8.0\Agenda.Logging.GeneratedMSBuildEditorConfig.editorconfig
+F:\PosTech\Agenda\Agenda.Logging\obj\Debug\net8.0\Agenda.Logging.AssemblyInfoInputs.cache
+F:\PosTech\Agenda\Agenda.Logging\obj\Debug\net8.0\Agenda.Logging.AssemblyInfo.cs
+F:\PosTech\Agenda\Agenda.Logging\obj\Debug\net8.0\Agenda.Logging.csproj.CoreCompileInputs.cache
+F:\PosTech\Agenda\Agenda.Logging\obj\Debug\net8.0\Agenda.Logging.sourcelink.json
+F:\PosTech\Agenda\Agenda.Logging\obj\Debug\net8.0\Agenda.Logging.dll
+F:\PosTech\Agenda\Agenda.Logging\obj\Debug\net8.0\refint\Agenda.Logging.dll
+F:\PosTech\Agenda\Agenda.Logging\obj\Debug\net8.0\Agenda.Logging.pdb
+F:\PosTech\Agenda\Agenda.Logging\obj\Debug\net8.0\ref\Agenda.Logging.dll
+F:\PosTech\Agenda\Agenda.Logging\bin\Debug\net8.0\Agenda.Domain.dll
+F:\PosTech\Agenda\Agenda.Logging\bin\Debug\net8.0\Agenda.Domain.pdb
+F:\PosTech\Agenda\Agenda.Logging\obj\Debug\net8.0\Agenda.Logging.csproj.CopyComplete

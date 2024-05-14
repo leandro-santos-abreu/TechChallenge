@@ -53,4 +53,11 @@ F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.
 F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Riok.Mapperly.Abstractions.dll
 F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Castle.Core.dll
 F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Agenda.Logging.dll
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Agenda.Logging.pdb
 F:\PosTech\Agenda\Agenda.Api\obj\Debug\net8.0\Agenda.Api.MvcApplicationPartsAssemblyInfo.cs
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\Agenda.Api.xml
+F:\PosTech\Agenda\Agenda.Api\obj\Debug\net8.0\Agenda.Api.xml
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\FluentValidation.dll
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+F:\PosTech\Agenda\Agenda.Api\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll

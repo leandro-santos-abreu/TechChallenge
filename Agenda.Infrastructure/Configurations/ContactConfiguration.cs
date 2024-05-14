@@ -14,7 +14,7 @@ namespace Agenda.Infrastructure.Configurations
             builder.Property(x => x.Name).HasColumnType("VARCHAR").HasMaxLength(150).IsRequired();
             builder.Property(x => x.Surname).HasColumnType("VARCHAR").HasMaxLength(150).IsRequired();
             builder.Property(x => x.CPF).HasColumnType("VARCHAR").HasMaxLength(11).IsRequired();
-            builder.Property(x => x.Email).HasColumnType("VARCHAR").HasMaxLength(11).IsRequired();
+            builder.Property(x => x.Email).HasColumnType("VARCHAR").HasMaxLength(150).IsRequired();
 
             builder.HasOne(u => u.User)
                 .WithMany(c => c.Contacts)

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Agenda.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Agenda.Api.Controllers.LoginController.Login(Agenda.Domain.EntitiesAbstractions.EntitiesInputs.UserInput,System.Threading.CancellationToken)">
+            <summary>
+            End-Point responsible for allowing users to login and obtain a unique Token to allow application use.
+            </summary>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Agenda.Api.Controllers.UserController.Get(System.Threading.CancellationToken)">
+            <summary>
+            End-Point responsible for retrieving all stored Users.
+            </summary>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Agenda.Api.Controllers.UserController.GetById(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            End-Point responsible for retrieving a specific User in the database using It's GUID.
+            </summary>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Agenda.Api.Controllers.UserController.Post(Agenda.Domain.EntitiesAbstractions.EntitiesInputs.UserInput,System.Threading.CancellationToken)">
+            <summary>
+            End-Point responsible for saveing a new User in the database.
+            </summary>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Agenda.Api.Controllers.UserController.Put(Agenda.Domain.Entities.User,System.Threading.CancellationToken)">
+            <summary>
+            End-Point responsible for updating a specific User in the database using It's old model.
+            </summary>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Agenda.Api.Controllers.UserController.Delete(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            End-Point responsible for deleting a specific User in the database using It's GUID.
+            </summary>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Agenda.API.Controllers.ContactsController.Get(System.Threading.CancellationToken)">
+            <summary>
+            End-Point responsible for retrieving all stored Contacts.
+            </summary>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Agenda.API.Controllers.ContactsController.GetById(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            End-Point responsible for retrieving a specific Contact in the database using It's GUID.
+            </summary>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Agenda.API.Controllers.ContactsController.Post(Agenda.Domain.EntitiesAbstractions.EntitiesInputs.ContactInput,System.Threading.CancellationToken)">
+            <summary>
+            End-Point responsible for saving a new Contact in the database.
+            </summary>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Agenda.API.Controllers.ContactsController.Put(Agenda.Domain.EntitiesAbstractions.EntitiesInputs.ContactInput,System.Threading.CancellationToken)">
+            <summary>
+            End-Point responsible for updating a Contact in the database using It's Old Model.
+            </summary>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Agenda.API.Controllers.ContactsController.Delete(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            End-Point responsible for deleting a Contact in the database using It's GUID.
+            </summary>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

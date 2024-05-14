@@ -1,4 +1,5 @@
 ﻿using Agenda.Domain.Entities;
+using Agenda.Domain.Interfaces.Repositories;
 
 namespace Agenda.Domain.Interfaces
 {
@@ -6,6 +7,7 @@ namespace Agenda.Domain.Interfaces
     {
         IUserRepository Users { get; }
         IRepository<Contact> Contacts { get; }
+        IRepository<LogEntity> Logs { get; }
         Task CompleteAsync(CancellationToken ct);
     }
 }

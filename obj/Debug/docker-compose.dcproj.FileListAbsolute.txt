@@ -34,3 +34,9 @@ F:\PosTech\Agenda\bin\Debug\NodaTime.dll
 F:\PosTech\Agenda\bin\Debug\Npgsql.NodaTime.dll
 F:\PosTech\Agenda\bin\Debug\Microsoft.EntityFrameworkCore.Proxies.dll
 F:\PosTech\Agenda\bin\Debug\Castle.Core.dll
+F:\PosTech\Agenda\bin\Debug\Agenda.Logging.dll
+F:\PosTech\Agenda\bin\Debug\Agenda.Logging.pdb
+F:\PosTech\Agenda\bin\Debug\Agenda.Api.xml
+F:\PosTech\Agenda\bin\Debug\FluentValidation.AspNetCore.dll
+F:\PosTech\Agenda\bin\Debug\FluentValidation.dll
+F:\PosTech\Agenda\bin\Debug\FluentValidation.DependencyInjectionExtensions.dll

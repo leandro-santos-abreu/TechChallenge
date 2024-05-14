@@ -1,9 +1,7 @@
 ﻿using Agenda.Api.Mappers;
-using Agenda.Domain.Entities;
 using Agenda.Domain.EntitiesAbstractions.EntitiesDto;
 using Agenda.Domain.EntitiesAbstractions.EntitiesInputs;
 using Agenda.Domain.Interfaces;
-using Agenda.Infrastructure.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,14 +9,22 @@ namespace Agenda.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ContactsController(IUnitOfWork unitOfWork) : ControllerBase
+    public class ContactsController(IUnitOfWork unitOfWork, ILogger<ContactsController> logger) : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
         private readonly ContactMapper _contactMapper = new();
 
+        private readonly ILogger<ContactsController> _logger = logger;
+
+        /// <summary>
+        /// End-Point responsible for retrieving all stored Contacts.
+        /// </summary>
+        /// <param name="ct"></param>
+        /// <returns></returns>
         [HttpGet]
         [Authorize]
-        [Produces(typeof(IEnumerable<ContactDto>))]
+        [ProducesResponseType(typeof(ContactDto), 200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> Get(CancellationToken ct)
         {
             try
@@ -33,9 +39,15 @@ namespace Agenda.API.Controllers
             }
         }
 
+        /// <summary>
+        /// End-Point responsible for retrieving a specific Contact in the database using It's GUID.
+        /// </summary>
+        /// <param name="ct"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         [Authorize]
-        [Produces(typeof(ContactDto))]
+        [ProducesResponseType(typeof(ContactDto), 200)]
+        [ProducesResponseType(404)]
         public async Task<IActionResult> GetById(Guid id, CancellationToken ct)
         {
             try
@@ -49,14 +61,22 @@ namespace Agenda.API.Controllers
             }
         }
 
+        /// <summary>
+        /// End-Point responsible for saving a new Contact in the database.
+        /// </summary>
+        /// <param name="ct"></param>
+        /// <returns></returns>
         [HttpPost]
         [Authorize]
-        [Produces(typeof(ContactDto))]
+        [ProducesResponseType(typeof(ContactDto), 200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> Post([FromBody] ContactInput entity, CancellationToken ct)
         {
             try
             {
                 var savedEntity = await _unitOfWork.Contacts.SaveAsync(_contactMapper.ContactInputToContact(entity), ct);
+                _logger.LogInformation($"Contact Of {savedEntity?.Email} Added To The Database");
+
                 await _unitOfWork.CompleteAsync(ct);
 
                 return Ok(_contactMapper.ContactToContactDto(savedEntity));
@@ -68,14 +88,22 @@ namespace Agenda.API.Controllers
             }
         }
 
+        /// <summary>
+        /// End-Point responsible for updating a Contact in the database using It's Old Model.
+        /// </summary>
+        /// <param name="ct"></param>
+        /// <returns></returns>
         [HttpPut]
         [Authorize]
-        [Produces(typeof(ContactDto))]
+        [ProducesResponseType(typeof(ContactDto), 200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> Put([FromBody] ContactInput entity, CancellationToken ct)
         {
             try
             {
                 var updatedEntity = await _unitOfWork.Contacts.UpdateAsync(_contactMapper.ContactInputToContact(entity));
+                _logger.LogInformation($"Contact Of {updatedEntity?.Email} Updated In The Database");
+
                 await _unitOfWork.CompleteAsync(ct);
 
                 return Ok(_contactMapper.ContactToContactDto(updatedEntity));
@@ -86,14 +114,22 @@ namespace Agenda.API.Controllers
             }
         }
 
+        /// <summary>
+        /// End-Point responsible for deleting a Contact in the database using It's GUID.
+        /// </summary>
+        /// <param name="ct"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         [Authorize]
-        [Produces(typeof(ContactDto))]
+        [ProducesResponseType(typeof(ContactDto), 200)]
+        [ProducesResponseType(400)]
         public async Task<IActionResult> Delete(Guid id, CancellationToken ct)
         {
             try
             {
                 var deletedEntity = (await _unitOfWork.Contacts.DeleteAsync(id, ct))!;
+                _logger.LogInformation($"Contact Of {deletedEntity?.Email} Deleted From The Database");
+
                 await _unitOfWork.CompleteAsync(ct);
 
                 return Ok(_contactMapper.ContactToContactDto(deletedEntity));

@@ -61,6 +61,30 @@ namespace Agenda.Infrastructure.Migrations
                     b.ToTable("Contacts", (string)null);
                 });
 
+            modelBuilder.Entity("Agenda.Domain.Entities.LogEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("timestamp");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("VARCHAR");
+
+                    b.Property<string>("LogLevel")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("VARCHAR");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Logs", (string)null);
+                });
+
             modelBuilder.Entity("Agenda.Domain.Entities.PhoneNumber", b =>
                 {
                     b.Property<Guid>("Id")
@@ -112,7 +136,7 @@ namespace Agenda.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("86236288-10fa-467b-bc9b-21cc0facc89b"),
+                            Id = new Guid("85107773-8036-4724-93f0-bce49ad9f09b"),
                             Password = "AEQhFqAVgpgrcsJHuIVbB+Wrb+TmY8XXijmVvfzvjo1bNuaQgsu+XukrY9Sfixi0oQ==",
                             UserName = "leandro.abreu"
                         });

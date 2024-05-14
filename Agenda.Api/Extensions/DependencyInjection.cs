@@ -1,10 +1,14 @@
 ﻿using Agenda.Api.Authentication;
 using Agenda.Domain.Interfaces;
+using Agenda.Domain.Interfaces.Caches;
+using Agenda.Infrastructure.Cache;
 using Agenda.Infrastructure.Data;
+using Agenda.Logging.Logger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
 using System.Text;
 
 namespace Agenda.Api.Extensions
@@ -18,9 +22,22 @@ namespace Agenda.Api.Extensions
                 options.UseNpgsql(builder.Configuration.GetConnectionString("ConnectionString"), o => o.UseNodaTime());
             }, ServiceLifetime.Scoped);
 
+            builder.Services.AddMemoryCache();
             builder.Services.AddScoped<DataContext>();
-            builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
-            builder.Services.AddTransient<ITokenService, TokenService>();
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddScoped(typeof(ICacheService<>), typeof(CacheService<>));
+
+
+            builder.Services.AddScoped<ITokenService, TokenService>();
+            builder.Services.AddScoped<ITokenCache, TokenCache>();
+
+            builder.Logging.ClearProviders();
+            var serviceProvider = builder.Services.BuildServiceProvider();
+
+            builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration
+            {
+                LogLevel = LogLevel.Information
+            }, serviceProvider.GetRequiredService<IUnitOfWork>()));
 
 
             var key = Encoding.ASCII.GetBytes(builder.Configuration.GetValue<string>("SecretJWT")!);
@@ -49,6 +66,10 @@ namespace Agenda.Api.Extensions
                     Title = "Agenda",
                     Description = ".NET 8 Web API"
                 });
+
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                swagger.IncludeXmlComments(xmlPath);
 
                 swagger.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme()
                 {
