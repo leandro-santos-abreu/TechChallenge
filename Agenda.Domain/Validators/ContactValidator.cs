@@ -8,37 +8,46 @@ namespace Agenda.Domain.Validators
         public ContactValidator() 
         {
             RuleFor(contact => contact.Name)
-                .NotNull()
                 .NotEmpty()
-                .MaximumLength(150);
+                .WithMessage("Field 'Name' Needs to Be Filed")
+                .MaximumLength(150)
+                .WithMessage("Field 'Name' Needs to Have It's Lenght Equal Or Lower Than 150 Characters");
 
             RuleFor(contact => contact.Surname)
-                .NotNull()
                 .NotEmpty()
-                .MaximumLength(150);
+                .WithMessage("Field 'Surname' Needs to Be Filed")
+                .MaximumLength(150)
+                .WithMessage("Field 'Surname' Needs to Have It's Lenght Equal Or Lower Than 150 Characters");
 
             RuleFor(contact => contact.CPF)
-                .NotNull()
                 .NotEmpty()
-                .MaximumLength(11)
+                .WithMessage("Field 'CPF' Needs to Be Filed")
+                .Length(11)
+                .WithMessage("Field 'CPF' Is Invalid")
                 .Must(ValidateCpf)
-                .WithMessage("Invalid CPF.");
+                .WithMessage("Field 'CPF' Is Invalid");
 
             RuleFor(contact => contact.Email)
-                .NotNull()
                 .NotEmpty()
+                .WithMessage("Field 'Email' Needs to Be Filed")
                 .MinimumLength(8)
+                .WithMessage("Field 'Email' Needs to Have It's Lenght Equal Or Higher Than 8 Characters")
                 .MaximumLength(150)
-                .EmailAddress();
+                .WithMessage("Field 'Email' Needs to Have It's Lenght Equal Or Lower Than 150 Characters")
+                .EmailAddress()
+                .WithMessage("Field 'Email' Is Invalid");
 
             RuleFor(contact => contact.UserId)
-                .NotNull()
-                .NotEmpty();
+                .NotEmpty()
+                .WithMessage("Field 'UserId' Needs to Be Filed");
 
         }
 
         private bool ValidateCpf(string cpf)
         {
+            if (cpf is null)
+                return false;
+
             int[] multiplier = [10, 9, 8, 7, 6, 5, 4, 3, 2];
             int[] secondMultiplier = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2];
 
