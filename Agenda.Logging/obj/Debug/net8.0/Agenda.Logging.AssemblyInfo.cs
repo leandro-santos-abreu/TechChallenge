@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Agenda.Logging")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2c076d7248d4a4f198a0fc304a47631c9486009")]
 [assembly: System.Reflection.AssemblyProductAttribute("Agenda.Logging")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Agenda.Logging")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

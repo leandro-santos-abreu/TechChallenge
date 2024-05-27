@@ -60,6 +60,14 @@
             <param name="ct"></param>
             <returns></returns>
         </member>
+        <member name="M:Agenda.API.Controllers.ContactsController.GetByDDD(System.String,System.Threading.CancellationToken)">
+            <summary>
+            End-Point responsible for retrieving all stored Contacts From a Specific DDD.
+            </summary>
+            <param name="ddd"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
         <member name="M:Agenda.API.Controllers.ContactsController.Post(Agenda.Domain.EntitiesAbstractions.EntitiesInputs.ContactInput,System.Threading.CancellationToken)">
             <summary>
             End-Point responsible for saving a new Contact in the database.

@@ -2,10 +2,6 @@
 using Agenda.Domain.Interfaces.Repositories;
 using Agenda.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Agenda.Infrastructure.Repositories
 {

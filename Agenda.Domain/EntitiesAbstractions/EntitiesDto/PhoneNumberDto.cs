@@ -1,7 +1,4 @@
-﻿using Agenda.Domain.Entities;
-using Agenda.Domain.ValueObjects;
-
-namespace Agenda.Domain.EntitiesAbstractions.EntitiesDto
+﻿namespace Agenda.Domain.EntitiesAbstractions.EntitiesDto
 {
     public class PhoneNumberDto
     {

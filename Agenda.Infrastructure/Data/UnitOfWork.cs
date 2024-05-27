@@ -23,7 +23,7 @@ namespace Agenda.Infrastructure.Data
         }
 
         public IUserRepository Users => _userRepository;
-        public IRepository<Contact> Contacts => _contactRepository;
+        public IContactRepository Contacts => _contactRepository;
         public IRepository<PhoneNumber> PhoneNumbers => _phoneNumberRepository;
         public IRepository<LogEntity> Logs => _logsRepository;
 

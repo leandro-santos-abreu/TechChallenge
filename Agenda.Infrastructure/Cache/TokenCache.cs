@@ -1,5 +1,4 @@
-﻿using Agenda.Domain.Interfaces;
-using Agenda.Domain.Interfaces.Caches;
+﻿using Agenda.Domain.Interfaces.Caches;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 

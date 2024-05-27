@@ -1,5 +1,4 @@
-﻿using Agenda.Domain.Entities;
-
+﻿
 namespace Agenda.Domain.EntitiesAbstractions.EntitiesDto
 {
     public class ContactDto

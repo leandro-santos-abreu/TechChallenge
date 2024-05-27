@@ -6,7 +6,7 @@ namespace Agenda.Domain.Interfaces
     public interface IUnitOfWork
     {
         IUserRepository Users { get; }
-        IRepository<Contact> Contacts { get; }
+        IContactRepository Contacts { get; }
         IRepository<LogEntity> Logs { get; }
         Task CompleteAsync(CancellationToken ct);
     }

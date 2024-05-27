@@ -62,6 +62,31 @@ namespace Agenda.API.Controllers
         }
 
         /// <summary>
+        /// End-Point responsible for retrieving all stored Contacts From a Specific Area Code.
+        /// </summary>
+        /// <param name="areaCode"></param>
+        /// <param name="ct"></param>
+        /// <returns></returns>
+        [HttpGet("get-by-area-code/{areaCode}")]
+        [Authorize]
+        [ProducesResponseType(typeof(ContactDto), 200)]
+        [ProducesResponseType(400)]
+        public async Task<IActionResult> GetByAreaCode(string areaCode, CancellationToken ct)
+        {
+            try
+            {
+                var contacts = (await _unitOfWork.Contacts.GetAllByAreaCode(areaCode, ct)).Select(_contactMapper.ContactToContactDto);
+                return Ok(contacts);
+            }
+            catch (Exception ex)
+            {
+                await Console.Out.WriteLineAsync(ex.Message);
+                return BadRequest($"Error: Failed to Return Contacts From Area Code {areaCode}! Try Again.");
+            }
+        }
+
+
+        /// <summary>
         /// End-Point responsible for saving a new Contact in the database.
         /// </summary>
         /// <param name="ct"></param>
